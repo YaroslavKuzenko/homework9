@@ -1,0 +1,482 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, ol, li{
+    list-style: none;
+}
+
+img{
+    vertical-align: top;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html, body{
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Playfair Display', serif;*/
+    font-size: 18px;
+}
+
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+}
+
+._container{
+    max-width: 1920px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+/*----Header-------------------------------------------------------------------*/
+
+.header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    z-index: 50;
+}
+
+.header_container{
+    display: flex;
+    height: 130px;
+    padding-top: 15px;
+
+}
+
+.header_logo{
+ cursor: pointer;
+}
+
+.header_img{
+    height: 25px;
+    width: auto;
+}
+
+.header_menu{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 15px 15px 0;
+}
+
+.menu_list{
+    display: flex;
+
+}
+
+.menu-item{
+    color: white;
+    transition: .2s;
+    font-weight: 600;
+}
+
+.menu-item:hover{
+    color: lightgrey;
+}
+
+.menu_list li{
+    padding-right: 20px;
+}
+
+.menu_list:last-child{
+    padding-right: 0;
+}
+
+
+/*----Main-------------------------------------------------------------------*/
+
+
+.main-block{
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/lighthouse.png");
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    padding-top: 130px;
+
+    color: #fff;
+    position: relative;
+}
+
+.main-block_text{
+    margin-bottom: 40px;
+}
+
+
+.main-block_title{
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+
+    padding-bottom: 40px;
+}
+
+.main-block_subtitle{
+    width: 550px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 57px;
+
+}
+
+.main-block_buttons{
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button_submit {
+
+}
+.button_submit a{
+    display: block;
+    height: 75px;
+    width: 300px;
+    background: #EBC91A;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+    font-weight: 600;
+    color: #0D0C0C;
+
+    transition: .2s;
+}
+
+.button_submit a:hover{
+    background-color: #F24646;
+    color: #fff;
+}
+
+.button_video a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button_video{
+}
+
+.button_video span{
+    width: 200px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3;
+
+    color: white;
+
+    padding-left: 20px;
+
+    transition: .2s;
+}
+
+.button_video span:hover{
+    color: lightgrey;
+}
+
+.video_img{
+    height: 75px;
+    width: auto;
+}
+
+.main-block_social{
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #EBC91A;
+    border-radius: 5px;
+
+    margin-top: 40px;
+    padding-top: 5px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.social_icon{
+    height: 30px;
+    width: auto;
+    margin: 5px;
+
+    transition: .2s;
+}
+
+.social_icon:hover{
+    fill: #F24646;
+}
+
+.main-block_nav{
+    max-width: 1020px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+    margin-left: auto;
+}
+
+.nav_item{
+    display: block;
+    width: 320px;
+    height: 215px;
+
+    background-size: 320px 215px;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    color: white;
+
+    padding: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav_item a{
+    color: inherit;
+    width: 100px;
+    height: 100px;
+}
+
+.nav_item::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 320px;
+    height: 215px;
+    border-radius: 15px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(2,0,36,0.3211659663865546) 27%);
+    transition: .4s;
+}
+
+.nav_item:hover.nav_item::after{
+    opacity: 0;
+}
+
+.nav_item:nth-child(1){
+    background-image: url("images/icland.jpeg");
+}
+
+.nav_item:nth-child(2){
+    background-image: url("images/dolomites.jpeg");
+}
+
+.nav_item:nth-child(3){
+    background-image: url("images/norway.jpeg");
+}
+
+.nav_item-num{
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    position: absolute;
+    z-index: 3;
+    padding-bottom: 25px;
+}
+
+.nav_item-text{
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 3;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.5em;
+
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_item-title{
+    width: 160px;
+    margin-right: 50px;
+}
+
+.nav_item-title{}
+
+
+/*----Контентні блоки-------------------------------------------------------------------*/
+
+.main-content{
+}
+
+.main-content_container{
+    max-width: 1335px;
+    margin: 130px 0;
+    padding-top: 20px;
+}
+
+.content-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 155px;
+}
+
+.content-item_image{
+    width: 60%;
+    height: 460px;
+
+
+    background-repeat: no-repeat;
+    color: white;
+
+    padding: 20px 30px 35px 30px;
+    border-radius: 15px;
+
+    position: relative;
+}
+
+.content-item_image:nth-child(1){
+    background-image: url("images/hawai.jpeg");
+    background-size: 100% 100%;
+}
+
+.content-item_image:nth-child(2){
+    background-image: url("images/vasyl.jpeg");
+    background-size: cover;
+}
+
+.content-image_num{
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+.content-image_num span{
+    display: block;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.content-image_bottom{
+    width: 90%;
+
+    margin-top: 50%;
+
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.content-image_title{
+    position: absolute;
+    bottom: 35px;
+    left: 30px;
+}
+
+#longImageArrow{
+    position: absolute;
+    right: 30px;
+    bottom: 35px;
+}
+
+
+
+.content-image_title{
+    font-size: 20px;
+    font-weight: 500;
+
+    position: absolute;
+}
+
+.content-item_text{
+    width: 30%
+}
+
+.content-text_title{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 1.22em;
+    margin-bottom: 30px;
+}
+
+.content-text_description{
+    font-size: 18px;
+    line-height: 1.83em;
+
+    margin-bottom: 55px;
+}
+
+.content-text_button a{
+    color: #EBC91A;
+    width: 300px;
+    height: 75px;
+    border: 2px solid #EBC91A;
+    border-radius: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.content-text_button a:hover{
+    border-color: #F24646;
+    color: #F24646;
+}
+
+/*----Кнопка Вверх-------------------------------------------------------------------*/
+.scroll-up{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up--active{
+    display: block;
+}
+
+/*----Футер-------------------------------------------------------------------*/
+.footer{
+    height: 180px;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+}
+
+.footer-item a{
+    color: #0D0C0C;
+    transition: .2s;
+}
+
+.footer-item a:hover{
+    color: #F24646;
+}
+
+.footer_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

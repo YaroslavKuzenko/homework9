@@ -1,0 +1,347 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, ol, li{
+    list-style: none;
+}
+
+img{
+    vertical-align: top;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html, body{
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Playfair Display', serif;*/
+    font-size: 18px;
+}
+
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+}
+
+._container{
+    max-width: 1920px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+
+/*----Header-------------------------------------------------------------------*/
+
+.header{
+    height: 130px;
+    color: #fff;
+    background-color: #306090;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    position: relative;
+}
+
+.header_container{
+    width: 100%;
+    display: flex;
+
+}
+
+.header_logo{
+    cursor: pointer;
+}
+
+.header_img{
+    height: 25px;
+    width: auto;
+}
+
+.header_menu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 15px 15px 0;
+}
+
+.menu_list{
+    display: flex;
+}
+
+.menu-item{
+    color: white;
+    transition: .2s;
+    font-weight: 600;
+}
+
+.menu-item:hover{
+    color: lightgrey;
+}
+
+.menu_list li{
+    padding-right: 20px;
+}
+
+.menu_list:last-child{
+    padding-right: 0;
+}
+
+/*----Breadcrumbs-------------------------------------------------------------------*/
+.breadcrumbs{
+    height: 47px;
+    background-color: #77B1EB;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.breadcrumbs-container{
+    width: 100%;
+}
+
+.breadcrumbs-text{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.breadcrumbs-text a{
+    color: white;
+    transition: .2s;
+}
+
+.breadcrumbs-text a:hover{
+    color: #0D0C0C;
+}
+
+/*----Основна частина-------------------------------------------------------------------*/
+
+.page{
+    margin-top: 80px;
+}
+
+.main-title{
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+/*----Галерея-------------------------------------------------------------------*/
+
+.gallery{
+    margin-top: 70px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    color: white;
+}
+
+.gallery-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-column:nth-child(1){
+    width: 60%;
+    padding-right: 20px;
+}
+
+.gallery-column:nth-child(2){
+    width: 40%;
+}
+
+.gallery-image_item{
+    width: 100%;
+    border-radius: 15px;
+    padding: 30px 30px 50px 30px;
+    position: relative;
+}
+
+.image_num{
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+.image_title{
+    font-weight: 600;
+    font-size: 35px;
+
+    position: absolute;
+    left: 30px;
+    bottom: 50px;
+}
+
+
+
+.gallery-image_item:nth-child(1){
+    height: 650px;
+    margin-bottom: 20px;
+    background-image: url("iceland/first.png");
+    background-size: cover;
+}
+
+.gallery-image_item:nth-child(2){
+    height: 530px;
+    background-image: url("iceland/second.png");
+    background-size: cover;
+}
+
+.gallery-column:nth-child(2) .gallery-image_item:nth-child(1){
+    height: 480px;
+    background-image: url("iceland/third.png");
+    background-size: cover;
+}
+
+.gallery-column:nth-child(2) .gallery-image_item:nth-child(2){
+    height: 700px;
+    background-image: url("iceland/fourth.png");
+    background-size: cover;
+}
+
+/*----Опис туру-------------------------------------------------------------------*/
+
+.main-description{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.desc-container{
+    max-width: 1190px;
+    text-align: center;
+}
+
+.desc-title{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.desc-title span{
+    font-family: 'Playfair Display', serif;
+}
+
+.desc-text:nth-child(1){
+    padding-bottom: 30px;
+}
+
+.desc-button{
+    display: flex;
+    justify-content: center;
+}
+
+.desc-button a{
+    width: 420px;
+    height: 75px;
+    background-color: #EBC91A;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 35px;
+    margin-top: 60px;
+
+
+    color: #0D0C0C;
+    font-weight: 600;
+
+    transition: .2s;
+}
+
+.desc-button a:hover{
+    background-color: #F24646;
+    color: white;
+}
+
+/*----Кнопка Вверх-------------------------------------------------------------------*/
+.scroll-up{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up--active{
+    display: block;
+}
+
+/*----Футер-------------------------------------------------------------------*/
+.footer{
+    height: 180px;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+}
+
+.footer-item a{
+    color: #0D0C0C;
+    transition: .2s;
+}
+
+.footer-item a:hover{
+    color: #F24646;
+}
+
+.footer_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_social{
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #EBC91A;
+    border-radius: 5px;
+
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.social_icon{
+    height: 30px;
+    width: auto;
+    margin: 5px;
+
+    transition: .2s;
+}
+
+.social_icon:hover{
+    fill: #F24646;
+}
+
+
+
+
+
+
+
+
+
+
+
